@@ -49,10 +49,10 @@ for i in range(0, len(files), 2):
         ret,thresh = cv2.threshold(mask1, 40, 255, 0)
         contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
-        if len(contours)>0:
+        if len(contours)>0 :
             cv2.drawContours(black, [max(contours, key = cv2.contourArea)], -1, [255, 255, 255], thickness=-1)
             only_ward = cv2.bitwise_and(satellite_view, black)
-        else:
+        else :
             print(i, ": Couldn't find any contours")
             continue
 
