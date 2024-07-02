@@ -19,7 +19,7 @@ time.sleep(7)
     
 hamburger = driver.find_element_by_class_name('searchbox-hamburger')
 hamburger.click()
-time.sleep(7)
+time.sleep(10)
 
 #set satellite on
 sat = driver.find_element_by_xpath("//div[@class='widget-settings-earth-item']/child::button[1]")
